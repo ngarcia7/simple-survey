@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form" class="example-form">
+  <div *ngFor="let question of questions">
+    <mat-form-field style="min-width: 300px" [id]="question.key" appearance="fill">
+      <mat-label>{{question.label}}</mat-label>
+      <input type="text" matInput [formControlName]="question.key" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="form.controls[question.key].hasError('required')">
+        {{question.label}} is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="content">
+    <button type="submit" [disabled]="!isValid" mat-raised-button color="primary">Submit</button>
+  </div>
+</form>

@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+  background: url("assets/circles-r2.png");
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.card {
+  padding: 0;
+  width: 50%;
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.p-b-md {
+  padding-bottom: 20px;
+}
